@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="javafxdb.FormController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="199.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new Student">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="94.0" layoutY="90.0" prefHeight="49.0" prefWidth="427.0" promptText="Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" layoutX="94.0" layoutY="176.0" prefHeight="49.0" prefWidth="427.0" promptText="Email">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTel" layoutX="94.0" layoutY="256.0" prefHeight="49.0" prefWidth="427.0" promptText="Telephone">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button onAction="#submit" layoutX="377.0" layoutY="332.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="146.0" style="-fx-background-color: red;" text="Submit" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button onAction="#backToList" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="&lt;&lt; Back" textFill="WHITE" />
+   </children>
+</Pane>
