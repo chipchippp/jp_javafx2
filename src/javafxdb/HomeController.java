@@ -22,11 +22,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable {
+public class HomeController extends FormController implements Initializable {
 
     public static ObservableList<Student> listStudents = FXCollections.observableArrayList();
     public ListView<Student> lv;
-    public static Student editStudent;
+    public static Student editPro;
+
 
     private final static String connectionString = "jdbc:mysql://localhost:3306/t2210a_jp";
     private final static String user = "root";
@@ -62,6 +63,17 @@ public class HomeController implements Initializable {
         }catch (Exception e){
             System.out.println("error:"+e.getMessage());
         }
+    }
+
+    public void editPro(MouseEvent mouseEvent) {
+        editPro = lv.getSelectionModel().getSelectedItem();
+        if (editPro == null){
+            txtName.setText(editPro.getName());
+            txtTel.setText(editPro.getTel());
+            txtEmail.setText(editPro.getEmail());
+        }
+
+
     }
 }
 

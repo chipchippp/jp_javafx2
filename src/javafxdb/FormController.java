@@ -45,13 +45,11 @@ public class FormController {
             alert.show();
         }
     }
-
-            public void clear() {
+       public void clear() {
                 txtName.clear();
                 txtEmail.clear();
                 txtTel.clear();
             }
-
 }
 
 
