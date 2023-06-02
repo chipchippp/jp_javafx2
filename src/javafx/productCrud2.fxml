@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.ProductCrud">
+   <children>
+      <ListView fx:id="listView1" layoutX="303.0" layoutY="71.0" onMouseClicked="#editPro" prefHeight="261.0" prefWidth="275.0" />
+      <Text layoutX="222.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Crud">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtProduct" layoutX="25.0" layoutY="76.0" promptText="Product" />
+      <TextField fx:id="txtDescribe" layoutX="25.0" layoutY="225.0" promptText="Describe" />
+      <TextField fx:id="txtQuantity" layoutX="25.0" layoutY="176.0" promptText="Quantity" />
+      <TextField fx:id="txtPrice" layoutX="25.0" layoutY="126.0" promptText="Price" />
+      <TextField fx:id="txtCategory" layoutX="25.0" layoutY="276.0" promptText="Category" />
+      <Button layoutX="146.0" layoutY="328.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="25.0" layoutY="328.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="67.0" text="Delete" />
+   </children>
+</Pane>

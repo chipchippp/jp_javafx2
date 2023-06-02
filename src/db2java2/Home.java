@@ -1,5 +1,6 @@
 package db2java2;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -57,5 +58,8 @@ public class Home extends javax.swing.JFrame{
     }
 
     private void initComponents() {
+    }
+
+    public void Cal(ActionEvent actionEvent) {
     }
 }
