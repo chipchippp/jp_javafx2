@@ -23,8 +23,6 @@ public class FormCTL {
 
             Connection conn = new Connector().getConn();
 
-
-
             //query
 
             String sql = "insert into students(name,email,tel) values(?,?,?)";
