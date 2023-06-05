@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="14.0" layoutY="124.0" prefHeight="686.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="38.0" layoutY="98.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Customer">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="162.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Supplier">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="235.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Employee">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="295.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Produce">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="475.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Reports">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="415.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Invoice">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="355.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Sales">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="537.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="124.0" text="Customer">
+               <font>
+                  <Font name="Tahoma Bold" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="243.0" layoutY="113.0" prefHeight="686.0" prefWidth="1051.0" />
+      <Pane layoutX="4.0" prefHeight="101.0" prefWidth="1308.0" />
+   </children>
+</AnchorPane>

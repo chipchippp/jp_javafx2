@@ -3,7 +3,7 @@ package java2fx;
 import javafx.scene.control.Button;
 
 public final class Student {
-    private  Integer id;
+    private Integer id;
     private String name;
     private String email;
     private String tel;

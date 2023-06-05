@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 
 public class Connector {
-    private final static String connectionString = "jdbc:mysql://localhost:3306/t2210a";
+    private final static String connectionString = "jdbc:mysql://localhost:3306/user";
     private final static String user = "root";
     private final static String pwd = "";// xampp: ""  mamp: "root"
     private Connection conn;
