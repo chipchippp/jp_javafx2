@@ -1,5 +1,6 @@
 package java2fx;
 
+import daopattern.StudentRepository;
 import database.Connector;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +18,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.Collections;
 import java.util.ResourceBundle;
 
 public class HomeCTL implements Initializable {
@@ -43,23 +45,14 @@ public class HomeCTL implements Initializable {
         tcAction.setCellValueFactory(new PropertyValueFactory<>("edit"));
 
         try {
-            Connection conn = new Connector().getConn();
-
-            Statement stt = conn.createStatement();
-            String sql = "select * from students";
-            ResultSet rs = stt.executeQuery(sql);
             ObservableList<Student> list = FXCollections.observableArrayList();
-            while (rs.next()){
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
-                String tel = rs.getString("tel");
-                Student s = new Student(id, name, email, tel);
-                list.add(s);
-            }
+            list.addAll(StudentRepository.getInstance().getAll()); //Dao pattern
             tbV.setItems(list);
+
         }catch (Exception e){
             System.out.println("error:"+e.getMessage());
         }
     }
+
+
 }

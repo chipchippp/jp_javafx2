@@ -1,7 +1,11 @@
 package java2fx;
 
+import daopattern.StudentRepository;
 import database.Connector;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
@@ -12,7 +16,10 @@ public class FormCTL {
     public TextField txtName;
     public TextField txtEmail;
     public TextField txtTel;
-
+    public void backToList(ActionEvent actionEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("homectl.fxml"));
+        Main.mainStage.setScene(new Scene(root,600,400));
+    }
     public void submit(ActionEvent actionEvent) {
         try {
             String name = txtName.getText();
@@ -21,25 +28,16 @@ public class FormCTL {
             Student sv = new Student(name, email,tel);
 
 
-            Connection conn = new Connector().getConn();
+            if (StudentRepository.getInstance().create(sv)){
+                backToList(null);
+            }else{
+                throw new Exception("không thể tạo mới sinh viên");
+            }
 
-            //query
-
-            String sql = "insert into students(name,email,tel) values(?,?,?)";
-            PreparedStatement stt = conn.prepareStatement(sql);
-            stt.setString(1,sv.getName());
-            stt.setString(2,sv.getEmail());
-            stt.setString(3,sv.getTel());
-            stt.executeUpdate();
-
-            backToList(null);
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText(e.getMessage());
             alert.show();
         }
-    }
-
-    public void backToList(ActionEvent actionEvent) {
     }
 }
