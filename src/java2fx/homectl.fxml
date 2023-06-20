@@ -8,26 +8,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java2fx.HomeCTL">
-   <children>
-      <Text layoutX="179.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student List">
-         <font>
-            <Font size="47.0" />
-         </font>
-      </Text>
-      <Button layoutX="455.0" layoutY="34.0" mnemonicParsing="false" onAction="#goToForm" style="-fx-background-color: red;" text="Create student" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Button>
-      <TableView fx:id="tbV" layoutX="14.0" layoutY="116.0" prefHeight="257.0" prefWidth="575.0">
-         <columns>
-            <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
-            <TableColumn fx:id="tcName" prefWidth="127.0" text="Name" />
-            <TableColumn fx:id="tcEmail" prefWidth="171.0" text="Email" />
-            <TableColumn fx:id="tcTel" minWidth="0.0" prefWidth="120.0" text="Telephone" />
-            <TableColumn fx:id="tcAction" minWidth="0.0" prefWidth="81.0" text="Action" />
-         </columns>
-      </TableView>
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java2fx.HomeCTL">
+    <children>
+        <Text fx:id="lbPage" layoutX="179.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student List">
+            <font>
+                <Font size="47.0" />
+            </font>
+        </Text>
+        <Button fx:id="btnCreate" layoutX="455.0" layoutY="34.0" mnemonicParsing="false" onAction="#goToForm" style="-fx-background-color: red;" text="Create student" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <TableView fx:id="tbV" layoutX="13.0" layoutY="163.0" prefHeight="257.0" prefWidth="575.0">
+            <columns>
+                <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="tcName" prefWidth="127.0" text="Name" />
+                <TableColumn fx:id="tcEmail" prefWidth="171.0" text="Email" />
+                <TableColumn fx:id="tcTel" minWidth="0.0" prefWidth="120.0" text="Telephone" />
+                <TableColumn fx:id="tcAction" minWidth="0.0" prefWidth="81.0" text="Action" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnDelete" layoutX="32.0" layoutY="34.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+      <ComboBox fx:id="cbLang" layoutX="455.0" layoutY="83.0" onAction="#chooseLang" prefHeight="31.0" prefWidth="117.0" />
+    </children>
 </Pane>

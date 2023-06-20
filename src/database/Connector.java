@@ -12,7 +12,7 @@ public class Connector {
 
     //singleton patter
     private static Connector instance;
-    private Connector() throws Exception {
+    public Connector() throws Exception {
         Class.forName("com.mysql.jdbc.Driver");
         this.conn = DriverManager.getConnection(connectionString, user, pwd);
     }

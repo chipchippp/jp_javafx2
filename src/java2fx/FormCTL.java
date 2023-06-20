@@ -1,16 +1,14 @@
 package java2fx;
 
-import daopattern.StudentRepository;
-import database.Connector;
+import enums.RepositoryType;
+import factory.RepositoryFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import login.Main;
 
 public class FormCTL {
     public TextField txtName;
@@ -28,7 +26,7 @@ public class FormCTL {
             Student sv = new Student(name, email,tel);
 
 
-            if (StudentRepository.getInstance().create(sv)){
+            if (RepositoryFactory.createRepositoryInstance(RepositoryType.STUDENT).create(sv)){
                 backToList(null);
             }else{
                 throw new Exception("không thể tạo mới sinh viên");

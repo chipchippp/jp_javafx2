@@ -2,12 +2,16 @@ package java2fx;
 
 import javafx.scene.control.Button;
 
+import java.sql.Date;
+
 public final class Student {
+    private Date bỉrthday;
     private Integer id;
     private String name;
     private String email;
     private String tel;
     private Button edit;
+
     public Student(String name, String email, String tel) {
         this.name = name;
         this.email = email;
@@ -20,6 +24,7 @@ public final class Student {
         this.tel = tel;
         this.edit = new Button("Edit");
     }
+
 
 
 

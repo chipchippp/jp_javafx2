@@ -18,7 +18,7 @@ public class Form {
             String pass = txtPass.getText();
             Login lg = new Login(email, pass);
 
-            Connection conn = new Connector().getConn();
+            Connection conn = Connector.getInstance().getConn();
 
 
             String sql ="insert into students(name,email,tel) values(?,?,?)";

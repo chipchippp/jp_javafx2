@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demo4.Time">
+    <children>
+        <HBox layoutX="232.0" layoutY="72.0" prefHeight="63.0" prefWidth="136.0" spacing="10.0">
+            <children>
+                <Text fx:id="txtMin1" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="30">
+                    <font>
+                        <Font size="39.0" />
+                    </font>
+                </Text>
+                <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                    <font>
+                        <Font size="39.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txtSec1" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+                    <font>
+                        <Font size="39.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <Button fx:id="btnStart" layoutX="99.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#Start" prefHeight="54.0" prefWidth="99.0" text="Start">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnPause" layoutX="257.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#Pause" text="Pause">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnStop" layoutX="402.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#Stop" prefHeight="54.0" prefWidth="99.0" text="Stop">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+    </children>
+</Pane>
