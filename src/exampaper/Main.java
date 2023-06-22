@@ -27,12 +27,6 @@ public class Main {
             } else if (select ==3){
                     displayAllCustomers();
             }
-
-
-
-
-
-
         }while (select!=4);
     }
 
