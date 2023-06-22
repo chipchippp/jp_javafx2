@@ -1,8 +1,12 @@
 package exampaper;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Customer {
+
     String name;
     String email;
     String phone;
@@ -36,4 +40,5 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

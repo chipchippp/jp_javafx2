@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-
-
+    private static Map<String, Customer> customerMap = new HashMap<>();
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int select=0;
 
@@ -18,7 +18,7 @@ public class Main {
             System.out.println("1. Add new customer ");
             System.out.println("2. Find by name");
             System.out.println("3. Display all");
-            System.out.println("0. Exit");
+            System.out.println("4. Exit");
             select = sc.nextInt();
             sc.nextLine();
             if (select == 1){
@@ -40,11 +40,30 @@ public class Main {
 
 
 
-        }while (select!=0);
+        }while (select!=4);
     }
-    public static class CustomerManager {
-         Map<String, Customer> customerMap = new HashMap<>();
+    private static void findCustomerByName(Scanner scanner) {
+        System.out.print("Enter name to search: ");
+        String name = scanner.nextLine();
 
-
+        Customer customer = customerMap.get(name);
+        if (customer != null) {
+            System.out.println("Name: " + customer.getName());
+            System.out.println("Email: " + customer.getEmail());
+            System.out.println("Phone: " + customer.getPhone());
+        } else {
+            System.out.println("Not found.");
+        }
     }
+
+    private static void displayAllCustomers() {
+        System.out.println("Customer List:");
+        for (Customer customer : customerMap.values()) {
+            System.out.println("Name: " + customer.getName());
+            System.out.println("Email: " + customer.getEmail());
+            System.out.println("Phone: " + customer.getPhone());
+            System.out.println();
+        }
+    }
+
 }
