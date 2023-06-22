@@ -5,29 +5,33 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
+
     static Scanner sc = new Scanner(System.in);
     private static Map<String, Customer> customerMap = new HashMap<>();
     public static void main(String[] args) {
-        int select=0;
+        try {
+            int select=0;
+            do {
 
-
-        do {
-
-            System.out.println("Menu: ");
-            System.out.println("1. Add new customer ");
-            System.out.println("2. Find by name");
-            System.out.println("3. Display all");
-            System.out.println("4. Exit");
-            select = sc.nextInt();
-            sc.nextLine();
-            if (select == 1) {
-                addCustomer();
-            } else if (select == 2){
+                System.out.println("Menu: ");
+                System.out.println("1. Add new customer ");
+                System.out.println("2. Find by name");
+                System.out.println("3. Display all");
+                System.out.println("4. Exit");
+                select = sc.nextInt();
+                sc.nextLine();
+                if (select == 1) {
+                    addCustomer();
+                } else if (select == 2){
                     findCustomerByName();
-            } else if (select ==3){
+                } else if (select ==3){
                     displayAllCustomers();
-            }
-        }while (select!=4);
+                }
+            }while (select!=4);
+        }catch (Exception e){
+            System.out.println(e);
+        }
+
     }
 
     private static void addCustomer(){
