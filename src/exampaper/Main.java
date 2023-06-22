@@ -57,7 +57,7 @@ public class Main {
             System.out.println("Name: " + customer.getName());
             System.out.println("Phone: " + customer.getPhone());
         } else {
-            System.out.println("Error!!!");
+            System.out.println("Not found!!");
         }
     }
 
