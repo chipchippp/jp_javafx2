@@ -24,7 +24,7 @@ public class Main {
                     addCustomer();
                 } else if (select == 2){
                     findCustomerByName();
-                } else if (select ==3){
+                } else if (select == 3){
                     displayAllCustomers();
                 }
             }while (select!=4);

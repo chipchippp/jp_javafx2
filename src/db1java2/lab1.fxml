@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db1java2.Product">
+   <children>
+      <RadioButton fx:id="rdAdd" layoutX="120.0" layoutY="243.0" mnemonicParsing="false" selected="true" text="Add">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <Text layoutX="241.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculation">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtR" layoutX="120.0" layoutY="185.0" prefHeight="31.0" prefWidth="360.0" promptText="Result">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNumberB" layoutX="120.0" layoutY="137.0" prefHeight="31.0" prefWidth="360.0" promptText="Number B:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNumberA" layoutX="120.0" layoutY="86.0" prefHeight="31.0" prefWidth="360.0" promptText="Number A:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="rdMul" layoutX="323.0" layoutY="243.0" mnemonicParsing="false" text="Mul">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdSub" layoutX="222.0" layoutY="243.0" mnemonicParsing="false" text="Sub">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdDiv" layoutX="423.0" layoutY="243.0" mnemonicParsing="false" text="Div">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="btnCal" contentDisplay="RIGHT" layoutX="120.0" layoutY="303.0" mnemonicParsing="false" text="Cal">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCanel" layoutX="409.0" layoutY="303.0" mnemonicParsing="false" text="Canel">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
